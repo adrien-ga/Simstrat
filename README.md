@@ -2,7 +2,6 @@
 
 *** Description ***  
 This GIT repository contains the source code of Simstrat, as used in the paper gmd-2016-262. It also contains the executable file, the parameter files and the input data files that allow to run the model for four different lakes.  
-This model version is temporary and an updated one will shortly be made available.  
 
 *** Structure of the repository ***  
 simstrat-source/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source code of the Simstrat model  
