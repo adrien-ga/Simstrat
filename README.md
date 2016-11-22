@@ -7,11 +7,11 @@ This model version is temporary and an updated one will shortly be made availabl
 *** Structure of the repository ***  
 simstrat-source/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source code of the Simstrat model  
 simstrat-documentation/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Documentation of the Simstrat model  
-kepsmodel.exe: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Binary executable of the Simstrat model (compiler: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GNU Fortran)  
-kepsilon_\*.par: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parameter files for lake *  
-kepsilon_\*_wfilt.par: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parameter files for lake *, using filtered wind  
-\*/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input files for lake *  
-\*.txt: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temperature observation files for lake *  
+kepsmodel.exe: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Binary executable of the Simstrat model (compiler: GNU Fortran)  
+kepsilon_\*.par: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parameter files for lake \*  
+kepsilon_\*_wfilt.par: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parameter files for lake \*, using filtered wind  
+*/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input files for lake \*  
+*.txt: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temperature observation files for lake \*  
 Simstrat_WindFiltering.R: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Script for wind filtering  
 
 *** Author ***  
