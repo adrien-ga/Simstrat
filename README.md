@@ -10,8 +10,8 @@ simstrat-documentation/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Documentation of the Sim
 kepsmodel.exe: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Binary executable of the Simstrat model (compiler: GNU Fortran)  
 kepsilon_\*.par: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parameter files for lake \*  
 kepsilon_\*_wfilt.par: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parameter files for lake \*, using filtered wind  
-*/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input files for lake \*  
-*.txt: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temperature observation files for lake \*  
+\*/: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input files for lake \*  
+\*.txt: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temperature observation files for lake \*  
 Simstrat_WindFiltering.R: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Script for wind filtering  
 
 *** Author ***  
