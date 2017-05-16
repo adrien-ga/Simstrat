@@ -1,0 +1,123 @@
+pcf
+* control data
+restart estimation
+13 88 1 0 1
+1 1 single nopoint 1 0 0
+5.0 2.0 0.3 0.01 10
+5.0 5.0 0.001
+0.1
+30 0.005 4 3 0.01 3
+1 1 1
+* parameter groups
+ fit	relative	0.01	0.00001	switch	2.0	parabolic
+* parameter data
+   lat	fixed	factor	4.6900e+01	4.0000e+01	5.0000e+01	none	1.0	0.0	1
+  pair	fixed	factor	9.9000e+02	9.0000e+02	1.0000e+03	none	1.0	0.0	1
+ alpha	none	factor	1.5000e-02	1.0000e-03	1.0000e-01	 fit	1.0	0.0	1
+   qNN	fixed	factor	1.2500e+00	7.0000e-01	1.3000e+00	none	1.0	0.0	1
+ fwind	fixed	factor	1.0000e+00	1.0000e+00	2.0000e+00	none	1.0	0.0	1
+   C10	fixed	factor	1.7000e-03	1.0000e-03	3.0000e-03	none	1.0	0.0	1
+    CD	fixed	factor	2.0000e-03	1.0000e-03	5.0000e-03	none	1.0	0.0	1
+  fgeo	fixed	factor	1.0000e-01	0.0000e+00	1.0000e+00	none	1.0	0.0	1
+  kmin	fixed	factor	1.0000e-15	1.0000e-30	1.0000e-09	none	1.0	0.0	1
+    p1	none	factor	1.1000e+00	5.0000e-01	1.5000e+00	 fit	1.0	0.0	1
+    p2	none	factor	9.0000e-01	5.0000e-01	1.5000e+00	 fit	1.0	0.0	1
+  beta	fixed	relative	3.0000e-01	0.0000e+00	4.0000e-01	none	1.0	0.0	1
+ albsw	fixed	relative	2.0000e-01	0.0000e+00	3.0000e-01	none	1.0	0.0	1
+* observation groups
+obs
+* observation data
+Temp_1_1	  5.4000e+00	1.0	obs
+Temp_1_2	  5.4000e+00	1.0	obs
+Temp_1_3	  5.3000e+00	1.0	obs
+Temp_1_4	  5.3000e+00	1.0	obs
+Temp_1_5	  5.2000e+00	1.0	obs
+Temp_1_6	  5.1000e+00	1.0	obs
+Temp_1_7	  5.1000e+00	1.0	obs
+Temp_1_8	  5.1000e+00	1.0	obs
+Temp_1_9	  5.1000e+00	1.0	obs
+Temp_1_10	  5.0000e+00	1.0	obs
+Temp_1_11	  5.0000e+00	1.0	obs
+Temp_2_1	  8.6000e+00	1.0	obs
+Temp_2_2	  8.3000e+00	1.0	obs
+Temp_2_3	  6.8000e+00	1.0	obs
+Temp_2_4	  6.4000e+00	1.0	obs
+Temp_2_5	  6.4000e+00	1.0	obs
+Temp_2_6	  6.3000e+00	1.0	obs
+Temp_2_7	  6.3000e+00	1.0	obs
+Temp_2_8	  6.0000e+00	1.0	obs
+Temp_2_9	  5.5000e+00	1.0	obs
+Temp_2_10	  5.2000e+00	1.0	obs
+Temp_2_11	  5.2000e+00	1.0	obs
+Temp_3_1	  1.4600e+01	1.0	obs
+Temp_3_2	  1.4500e+01	1.0	obs
+Temp_3_3	  1.4200e+01	1.0	obs
+Temp_3_4	  1.0700e+01	1.0	obs
+Temp_3_5	  8.2000e+00	1.0	obs
+Temp_3_6	  7.0000e+00	1.0	obs
+Temp_3_7	  6.6000e+00	1.0	obs
+Temp_3_8	  6.2000e+00	1.0	obs
+Temp_3_9	  5.6000e+00	1.0	obs
+Temp_3_10	  5.4000e+00	1.0	obs
+Temp_3_11	  5.4000e+00	1.0	obs
+Temp_4_1	  2.5700e+01	1.0	obs
+Temp_4_2	  2.0000e+01	1.0	obs
+Temp_4_3	  1.4800e+01	1.0	obs
+Temp_4_4	  1.2000e+01	1.0	obs
+Temp_4_5	  1.0600e+01	1.0	obs
+Temp_4_6	  9.4000e+00	1.0	obs
+Temp_4_7	  7.4000e+00	1.0	obs
+Temp_4_8	  6.5000e+00	1.0	obs
+Temp_4_9	  5.8000e+00	1.0	obs
+Temp_4_10	  5.4000e+00	1.0	obs
+Temp_4_11	  5.4000e+00	1.0	obs
+Temp_5_1	  2.3700e+01	1.0	obs
+Temp_5_2	  2.3000e+01	1.0	obs
+Temp_5_3	  1.8300e+01	1.0	obs
+Temp_5_4	  1.2500e+01	1.0	obs
+Temp_5_5	  9.9000e+00	1.0	obs
+Temp_5_6	  8.5000e+00	1.0	obs
+Temp_5_7	  7.8000e+00	1.0	obs
+Temp_5_8	  6.8000e+00	1.0	obs
+Temp_5_9	  5.7000e+00	1.0	obs
+Temp_5_10	  5.5000e+00	1.0	obs
+Temp_5_11	  5.4000e+00	1.0	obs
+Temp_6_1	  1.8700e+01	1.0	obs
+Temp_6_2	  1.8700e+01	1.0	obs
+Temp_6_3	  1.8700e+01	1.0	obs
+Temp_6_4	  1.8300e+01	1.0	obs
+Temp_6_5	  1.3400e+01	1.0	obs
+Temp_6_6	  1.0900e+01	1.0	obs
+Temp_6_7	  8.9000e+00	1.0	obs
+Temp_6_8	  7.1000e+00	1.0	obs
+Temp_6_9	  5.6000e+00	1.0	obs
+Temp_6_10	  5.5000e+00	1.0	obs
+Temp_6_11	  5.4000e+00	1.0	obs
+Temp_7_1	  1.2500e+01	1.0	obs
+Temp_7_2	  1.2500e+01	1.0	obs
+Temp_7_3	  1.2500e+01	1.0	obs
+Temp_7_4	  1.2500e+01	1.0	obs
+Temp_7_5	  1.2400e+01	1.0	obs
+Temp_7_6	  1.2000e+01	1.0	obs
+Temp_7_7	  1.1200e+01	1.0	obs
+Temp_7_8	  7.2000e+00	1.0	obs
+Temp_7_9	  5.8000e+00	1.0	obs
+Temp_7_10	  5.6000e+00	1.0	obs
+Temp_7_11	  5.6000e+00	1.0	obs
+Temp_8_1	  9.4000e+00	1.0	obs
+Temp_8_2	  9.4000e+00	1.0	obs
+Temp_8_3	  9.4000e+00	1.0	obs
+Temp_8_4	  9.4000e+00	1.0	obs
+Temp_8_5	  9.2000e+00	1.0	obs
+Temp_8_6	  9.2000e+00	1.0	obs
+Temp_8_7	  8.8000e+00	1.0	obs
+Temp_8_8	  8.0000e+00	1.0	obs
+Temp_8_9	  5.7000e+00	1.0	obs
+Temp_8_10	  5.2000e+00	1.0	obs
+Temp_8_11	  5.2000e+00	1.0	obs
+* model command line
+model.bat
+* model input/output
+keps_par.tpl	kepsilon_PEST.par
+keps_obs.ins	ModelObs.dat
+* prior information

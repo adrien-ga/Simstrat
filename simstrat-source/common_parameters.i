@@ -10,9 +10,9 @@
       double precision p_radin,p_windf,beta_sol,albsw,f_wind
       double precision fgeo,fgeo_add(0:mxl),fsed,fsed_add(0:mxl)
       integer salctr,delsal,adv
-      character*100 ParName,MorphName,InitName,ForcingName,AbsorpName
-      character*100 GridName,zoutName,toutName,PathOut
-      character*100 QinpName,QoutName,TinpName,SinpName
+      character*200 ParName,MorphName,InitName,ForcingName,AbsorpName
+      character*200 GridName,zoutName,toutName,PathOut
+      character*200 QinpName,QoutName,TinpName,SinpName
       integer Mod,Stab,ModFlux,NBC,WindFilt,ModSNorm,ModC10,ModInflow,Pgrad,ModSal
       logical OutBin
       integer xli,xl,num_save,depth_save,nsave

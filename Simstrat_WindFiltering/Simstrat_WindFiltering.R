@@ -3,25 +3,25 @@ graphics.off()
 source("GetResults.R")
 
 #Lac Léman
-forc_file = "LacLeman/Forcing_H.dat3"
-forc_file_out = "LacLeman/Forcing_WFILT.dat3"
-morph_file = "LacLeman/Morphology.dat"
-results_dir = "LacLeman_Results/"
+#forc_file = "LacLeman/Forcing_H.dat3"
+#forc_file_out = "LacLeman/Forcing_WFILT.dat3"
+#morph_file = "LacLeman/Morphology.dat"
+#results_dir = "LacLeman_Results/"
 #Bodensee
 #forc_file = "Bodensee/Forcing_Guettingen_1981-2012.dat2"
 #forc_file_out = "Bodensee/Forcing_Guettingen_1981-2012_WFILT.dat2"
 #morph_file = "Bodensee/Morphology.dat"
 #results_dir = "Bodensee_Results/"
 #Bielersee
-forc_file = "Bielersee/SimForceStationComb_1994_2014.dat3"
-forc_file_out = "Bielersee/SimForceStationComb_1994_2014_WFILT.dat3"
-morph_file = "Bielersee/Morph_Biel.dat"
-results_dir = "Bielersee_Results/"
+#forc_file = "Bielersee/SimForceStationComb_1994_2014.dat3"
+#forc_file_out = "Bielersee/SimForceStationComb_1994_2014_WFILT.dat3"
+#morph_file = "Bielersee/Morph_Biel.dat"
+#results_dir = "Bielersee_Results/"
 #Lac de Neuchâtel
-#forc_file = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014.dat3"
-#forc_file_out = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014_WFILT.dat3"
-#morph_file = "LacDeNeuchatel/Morph_Neuchatel.dat"
-#results_dir = "LacDeNeuchatel_Results/"
+forc_file = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014.dat3"
+forc_file_out = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014_WFILT.dat3"
+morph_file = "LacDeNeuchatel/Morph_Neuchatel.dat"
+results_dir = "LacDeNeuchatel_Results/"
 
 density = function(T) {
   #Water density
@@ -178,7 +178,7 @@ lines(time,f_dir,col="green")
 lines(time,f_stab,col="red")
 legend(time[1],1,c("Wind duration","Wind direction","Lake stability"))
 
-mm = as.POSIXlt(time)$mon+1
+month = as.POSIXlt(time)$mon+1
 f_dur_avg = numeric(length=12)
 f_dir_avg = numeric(length=12)
 f_stab_avg = numeric(length=12)
@@ -188,14 +188,14 @@ f_avg = numeric(length=12)
 #f_stab_std = numeric(length=12)
 #f_std = numeric(length=12)
 for (i in 1:12) {
-  f_dur_avg[i]=mean(f_dur[mm==i])
-  f_dir_avg[i]=mean(f_dir[mm==i])
-  f_stab_avg[i]=mean(f_stab[mm==i])
-  f_avg[i]=mean(f[mm==i])
-  #f_dur_std[i]=sd(f_dur[mm==i])
-  #f_dir_std[i]=sd(f_dir[mm==i])
-  #f_stab_std[i]=sd(f_stab[mm==i])
-  #f_std[i]=sd(f[mm==i])
+  f_dur_avg[i]=mean(f_dur[month==i])
+  f_dir_avg[i]=mean(f_dir[month==i])
+  f_stab_avg[i]=mean(f_stab[month==i])
+  f_avg[i]=mean(f[month==i])
+  #f_dur_std[i]=sd(f_dur[month==i])
+  #f_dir_std[i]=sd(f_dir[month==i])
+  #f_stab_std[i]=sd(f_stab[month==i])
+  #f_std[i]=sd(f[month==i])
 }
 plot(1:12,f_dur_avg,type="o",col="blue",main="Monthly-averaged reduction factors",ylim=c(0,1),xlab="Month",ylab="Value of reduction factor [-]",xaxt="n",cex.axis=1.1,cex.lab=1.3)
 axis(1,at=1:12,labels=month.abb[1:12],cex.axis=1.1)
@@ -205,6 +205,7 @@ lines(1:12,f_avg,type="o",col="black",lwd=2)
 #lines(1:12,f_avg+f_std,type="l",col="black")
 #lines(1:12,f_avg-f_std,type="l",col="black")
 legend(1,1,c("Wind duration","Lake stability","Altogether"),lty=1,lwd=c(1,1,2),pch=1,col=c("blue","red","black"),cex=1.1)
+
 stop()
 doy = as.POSIXlt(time)$yday+1
 f_dur_avg = numeric(length=365)
