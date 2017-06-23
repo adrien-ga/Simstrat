@@ -3,10 +3,10 @@ graphics.off()
 source("GetResults.R")
 
 #Lac Léman
-#forc_file = "LacLeman/Forcing_H.dat3"
-#forc_file_out = "LacLeman/Forcing_WFILT.dat3"
-#morph_file = "LacLeman/Morphology.dat"
-#results_dir = "LacLeman_Results/"
+forc_file = "LacLeman/Forcing_H.dat3"
+forc_file_out = "LacLeman/Forcing_WFILT.dat3"
+morph_file = "LacLeman/Morphology.dat"
+results_dir = "LacLeman_Results/"
 #Bodensee
 #forc_file = "Bodensee/Forcing_Guettingen_1981-2012.dat2"
 #forc_file_out = "Bodensee/Forcing_Guettingen_1981-2012_WFILT.dat2"
@@ -18,10 +18,15 @@ source("GetResults.R")
 #morph_file = "Bielersee/Morph_Biel.dat"
 #results_dir = "Bielersee_Results/"
 #Lac de Neuchâtel
-forc_file = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014.dat3"
-forc_file_out = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014_WFILT.dat3"
-morph_file = "LacDeNeuchatel/Morph_Neuchatel.dat"
-results_dir = "LacDeNeuchatel_Results/"
+#forc_file = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014.dat3"
+#forc_file_out = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014_WFILT.dat3"
+#morph_file = "LacDeNeuchatel/Morph_Neuchatel.dat"
+#results_dir = "LacDeNeuchatel_Results/"
+#Idealized case
+#forc_file = "IdealizedCase/Forcing_period24.dat3"
+#forc_file_out = "IdealizedCase/Forcing_period24_WFILT.dat3"
+#morph_file = "IdealizedCase/Morphology.dat"
+#results_dir = "IdealizedCase_Results/"
 
 density = function(T) {
   #Water density
@@ -134,7 +139,7 @@ while (max(WS2)>cr) {
   #}
   WS2[is:ie] = cr
 }
-Wdur[Wdur<min(Tcut)] = min(Tcut)
+#Wdur[Wdur<min(Tcut)] = min(Tcut)
 Wdir[Wdir<0.5] = 0.5
 
 #Wedderburn number
@@ -154,8 +159,7 @@ Wb[!is.finite(Wb)]=max(Wb[is.finite(Wb)])
 #Duration of wind events
 f_dur = (Wdur/Tcut)^0.5
 f_dur[f_dur>1] = 1
-                                          #f_dur[f_dur>=0.95] = 1
-                                          #f_dur[f_dur<0.95] = f_dur[f_dur<0.95]+0.05
+
 #Homogeneity of wind direction
 f_dir = (Wdir-0.5)*2+0.5
 f_dir[f_dir>1] = 1
@@ -165,9 +169,6 @@ f_dir[f_dir>1] = 1
 crit = pmax(L,2*min(L[L>0]))/(4*h1)
 crit[!is.finite(crit)] = max(crit[is.finite(crit)])
 f_stab = 1/(1+Wb/crit)
-#p1=3 p2=50
-#f_stab = double(Wb<=p1)
-#f_stab(Wb>p1 & Wb<=p2) = (p2-Wb(Wb>p1 & Wb<=p2))/(p2-p1)
 
 f_dir = rep(1,length(f_dir))
 f = f_dur*f_dir*f_stab
@@ -206,7 +207,7 @@ lines(1:12,f_avg,type="o",col="black",lwd=2)
 #lines(1:12,f_avg-f_std,type="l",col="black")
 legend(1,1,c("Wind duration","Lake stability","Altogether"),lty=1,lwd=c(1,1,2),pch=1,col=c("blue","red","black"),cex=1.1)
 
-stop()
+#stop()
 doy = as.POSIXlt(time)$yday+1
 f_dur_avg = numeric(length=365)
 f_dir_avg = numeric(length=365)
