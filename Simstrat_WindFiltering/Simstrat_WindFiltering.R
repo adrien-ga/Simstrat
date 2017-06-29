@@ -23,10 +23,10 @@ results_dir = "LacLeman_Results/"
 #morph_file = "LacDeNeuchatel/Morph_Neuchatel.dat"
 #results_dir = "LacDeNeuchatel_Results/"
 #Idealized case
-#forc_file = "IdealizedCase/Forcing_period24.dat3"
-#forc_file_out = "IdealizedCase/Forcing_period24_WFILT.dat3"
-#morph_file = "IdealizedCase/Morphology.dat"
-#results_dir = "IdealizedCase_Results/"
+forc_file = "IdealizedCase/Forcing_period8.dat4"
+forc_file_out = "IdealizedCase/Forcing_period8_WFILT.dat4"
+morph_file = "IdealizedCase/Morphology.dat"
+results_dir = "IdealizedCase_Results/"
 
 density = function(T) {
   #Water density
@@ -229,19 +229,25 @@ plot(time,WS,type="l",xlab="Year",ylab="Wind speed [m/s]")
 lines(time,WS_filt,type="l",col="red")
 legend(time[1],10.5,c("Raw","Filtered"),lty=1,col=c("black","red"))
 #plot(time,WS_filt/WS,type="l",col="blue",xlab="Year",ylab="Filtering ratio")
-stop()
+#stop()
 #Rewrite forcing file including time series of filtered wind
 fid = file(forc_file_out)
 open(fid,"w")
 type_out = substr(forc_file_out,nchar(forc_file_out),nchar(forc_file_out))
 if (type_out=='3') {
   writeLines("t\tu (m/s)\tv (m/s)\tTair (oC)\tFsol (W/m2)\tvap (mbar)\tcloud coverage\tfiltered wind",fid)
+} else if (type_out=='4') {
+  writeLines("t\tu (m/s)\tv (m/s)\tHeat (W/m2)\tFsol (W/m2)\tfiltered wind",fid)
+} else if (type_out=='1') {
+  writeLines("t\tu (m/s)\tv (m/s)\tTsurf (W/m2)\tFsol (W/m2)\tfiltered wind",fid)
 } else if (type_out=='2') {
   writeLines("t\tu (m/s)\tv (m/s)\tTair (oC)\tFsol (W/m2)\tvap (mbar)\tfiltered wind",fid)
 }
 for (k in 1:nrow(forc)) {
   if (type_out=='3') {
     writeLines(sprintf("%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f",forc[k,1],forc[k,2],forc[k,3],forc[k,4],forc[k,5],forc[k,6],forc[k,7],WS_filt[k]),fid)
+  } else if (type_out=='1' || type_out=='4') {
+    writeLines(sprintf("%f\t%f\t%f\t%f\t%f\t%f",forc[k,1],forc[k,2],forc[k,3],forc[k,4],forc[k,5],WS_filt[k]),fid)
   } else if (type_out=='2') {
     writeLines(sprintf("%f\t%f\t%f\t%f\t%f\t%f\t%f",forc[k,1],forc[k,2],forc[k,3],forc[k,4],forc[k,5],as.numeric(as.character(forc[k,6])),WS_filt[k]),fid)
   }

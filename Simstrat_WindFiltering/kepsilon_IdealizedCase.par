@@ -2,7 +2,7 @@
 IdealizedCase\InitialConditions.dat
 IdealizedCase\Grid.dat
 IdealizedCase\Morphology.dat
-IdealizedCase\Forcing_period1.dat3
+IdealizedCase\Forcing_period9.dat4
 IdealizedCase\Absorption.dat
 IdealizedCase_Results\
 IdealizedCase\Output_depth.dat
@@ -22,7 +22,7 @@ IdealizedCase\Sinp0.dat
 0            Biogeochemistry model (0/default:off, 1:on)
 1            Stability function (1:constant, 2:quasi-equilibrium)
 1            Flux condition (0:Dirichlet condition, 1:no-flux)
-3            Forcing (1:Wind+Temp+SolRad, 2:(1)+Vap, 3:(2)+Cloud, 4:Wind+HeatFlux+SolRad)
+4            Forcing (1:Wind+Temp+SolRad, 2:(1)+Vap, 3:(2)+Cloud, 4:Wind+HeatFlux+SolRad)
 0			 Use filtered wind to compute seiche energy (0/default:off, 1:on) (if 1:on, one more column is needed in forcing file)
 2            Seiche normalization (1:max N^2, 2:integral)
 3            Wind drag model (1/default:constant, 2:ocean (increasing), 3:lake (Wüest and Lorke 2003))
@@ -34,7 +34,7 @@ IdealizedCase\Sinp0.dat
 10           Averaging data
 *** Model parameters **************************************
 47.00        Lat [°]		Latitude for Coriolis parameter
-609825       p_air [mbar]	Air pressure
+990          p_air [mbar]	Air pressure
 0.01         a_seiche [-]	Fraction of wind energy to seiche energy
 1.25         q_NN			Fit parameter for distribution of seiche energy
 1.00         f_wind	[-]		Fraction of forcing wind to wind at 10m (W10/Wf)
