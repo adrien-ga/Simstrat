@@ -2,31 +2,31 @@ rm(list = ls())
 graphics.off()
 source("GetResults.R")
 
-#Lac Léman
+##Lac Léman
 forc_file = "LacLeman/Forcing_H.dat3"
 forc_file_out = "LacLeman/Forcing_WFILT.dat3"
 morph_file = "LacLeman/Morphology.dat"
 results_dir = "LacLeman_Results/"
-#Bodensee
+##Bodensee
 #forc_file = "Bodensee/Forcing_Guettingen_1981-2012.dat2"
 #forc_file_out = "Bodensee/Forcing_Guettingen_1981-2012_WFILT.dat2"
 #morph_file = "Bodensee/Morphology.dat"
 #results_dir = "Bodensee_Results/"
-#Bielersee
+##Bielersee
 #forc_file = "Bielersee/SimForceStationComb_1994_2014.dat3"
 #forc_file_out = "Bielersee/SimForceStationComb_1994_2014_WFILT.dat3"
 #morph_file = "Bielersee/Morph_Biel.dat"
 #results_dir = "Bielersee_Results/"
-#Lac de Neuchâtel
+##Lac de Neuchâtel
 #forc_file = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014.dat3"
 #forc_file_out = "LacDeNeuchatel/SimForceStationComb_Neuchatel_1994_2014_WFILT.dat3"
 #morph_file = "LacDeNeuchatel/Morph_Neuchatel.dat"
 #results_dir = "LacDeNeuchatel_Results/"
-#Idealized case
-forc_file = "IdealizedCase/Forcing_period8.dat4"
-forc_file_out = "IdealizedCase/Forcing_period8_WFILT.dat4"
-morph_file = "IdealizedCase/Morphology.dat"
-results_dir = "IdealizedCase_Results/"
+##Idealized case
+#forc_file = "IdealizedCase/Forcing_period1.dat4"
+#forc_file_out = "IdealizedCase/Forcing_period1_WFILT.dat4"
+#morph_file = "IdealizedCase/Morphology.dat"
+#results_dir = "IdealizedCase_Results/"
 
 density = function(T) {
   #Water density
