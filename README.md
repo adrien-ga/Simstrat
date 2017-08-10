@@ -19,9 +19,9 @@ The R function GetResults.R can be used to extract and plot the results. In our 
 
 *** Instructions to calibrate the model ***  
 The scripts for calibration were developed for Windows platforms. They assume PEST is installed and available (see Manual). They furthermore assume R (version 3.3.1) is installed and the following executable is available: C:/APPS/R/R-3.3.1/bin/x64/RScript.exe.  
-To launch calibration using PEST, run the script runPEST.bat (standard) or runPEST_parallel.bat (parallelized on 4 CPUs) from Simstrat_WindFiltering/\*_PEST/. At the end of calibration, the set of optimal parameters is written in the text file Simstrat_WindFiltering/\*_PEST/keps_calib.par.
+To launch calibration for lake * using PEST for lake *, run the script runPEST.bat (standard) or runPEST_parallel.bat (parallelized on 4 CPUs) from Simstrat_WindFiltering/\*_PEST/. At the end of calibration, the set of optimal parameters is written in the text file Simstrat_WindFiltering/\*_PEST/keps_calib.par.
 
-*** Instructions to verify the model ***
+*** Instructions to verify the model ***  
 An idealized case was developed for verification of the wind filtering algorithms and of the model. In this idealized case, wind is a periodic rectangular function of variable frequency affecting a two-layer basin. The corresponding filtered wind is generated via the script Simstrat_WindFiltering/Simstrat_WindFiltering.R. This allows to show that, depending on the frequency of the wind function, filtering is correctly performed and transmitted to the model and that BSIW excitation occurs as expected. The idealized case can then be run using Simstrat_WindFiltering/kepsilon_IdealizedCase.par (par file) as input to the model executable (see above).
 
 *** Author ***  
